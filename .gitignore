@@ -101,5 +101,5 @@ ENV/
 .mypy_cache/
 
 # ignore the market data files
-.csv
-.pickle
+*.pickle
+*.csv
