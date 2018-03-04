@@ -7,3 +7,5 @@ TODO:
 Make machine learning training data with more granular data for increased accuracy
 Create new data for new strategies.
 
+Bugs: 
+code throws an error when some data cannot be downloaded. have to run the code multiple times to download everything and get rid of the error
