@@ -61,7 +61,7 @@ def plotcandlesticks(dataframe):
 
 if __name__== "__main__":
 	# getData()
-	dataframe = readCSV('tsla.csv')
+	# dataframe = readCSV('tsla.csv')
 
 	## plot the adjusted close
 	# dataframe['Adj Close'].plot()
@@ -72,7 +72,7 @@ if __name__== "__main__":
 	# rollingAverages(dataframe, 100)
 	# resampleOHLC(dataframe)
 	# print(dataframe.head())
-	# df.saveSP500Tickers()
+	df.saveSP500Tickers()
 	df.getDataYahoo()
 	df.compileSP500Data()
 	df.visualiseData()
