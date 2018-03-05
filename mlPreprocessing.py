@@ -60,6 +60,7 @@ def extractFeaturesets(ticker):
 	y = dataframe['{}_target'.format(ticker)].values
 	return X, y, dataframe
 
-extractFeaturesets('MMM')
+if __name__== "__main__":
+	extractFeaturesets('MMM')
 
 
