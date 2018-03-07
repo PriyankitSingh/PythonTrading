@@ -6,6 +6,7 @@ Some code is from the youtube channel sentdex's playlist about python which will
 TODO: 
 Make machine learning training data with more granular data for increased accuracy
 Create new data for new strategies.
+Use Quantopian for backtesting and better data
 
 Bugs: 
 code throws an error when some data cannot be downloaded. have to run the code multiple times to download everything and get rid of the error
