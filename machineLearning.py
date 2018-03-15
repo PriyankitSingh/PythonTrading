@@ -12,6 +12,7 @@ def createModel(ticker):
 	XTrain, XTest, yTrain, yTest = cross_validation.train_test_split(X, y, test_size=0.3)
 	
 	# define a classifier, try different ones
+	# classifier = neighbors.KNeighborsClassifier() 
 	classifier = VotingClassifier([ ('svm', svm.LinearSVC()), ('fForest', RandomForestClassifier()), ('knn', neighbors.KNeighborsClassifier()) ])
 	classifier.fit(XTrain, yTrain) # train the classifier
 
