@@ -1,3 +1,11 @@
+'''
+This file uses existing code that makes use of optimize API to optimize the multi alpha factor strategy. Replace the initialize method to to come up
+with a new strategy. This must be run on quantopian. 
+This is the same strategy as multipleAlphaFactors file
+TODO: Add stop loss because we're still losing money on shorts. 
+https://www.quantopian.com/posts/optimize-api-now-available-in-algorithms
+'''
+
 import pandas as pd
 
 import quantopian.algorithm as algo
@@ -31,6 +39,7 @@ BASE_UNIVERSE_RECALCULATE_FREQUENCY = 'month_start'  # {week,quarter,year}_start
 
 
 def initialize(context):
+    ## plugging in our factors into existing code
     testing_factor1 = operation_ratios.operation_margin.latest
     testing_factor2 = operation_ratios.revenue_growth.latest
     testing_factor3 = sentiment.sentiment_signal.latest
