@@ -32,6 +32,8 @@ def initialize(context):
 
     # Create our dynamic stock selector.
     algo.attach_pipeline(make_pipeline(), 'pipeline')
+    
+    set_commission(commission.PerTrade(cost=0.001))
 
 
 def make_pipeline():
@@ -46,7 +48,7 @@ def make_pipeline():
     sentiment_quantiles = sentiment_factor.rank(mask=universe, method='average').quantiles(2) # separate all stocks into 2 quantiles
     pipe = Pipeline(columns={'sentiment': sentiment_factor,
                             'longs': (sentiment_factor >= 4),
-                            'shorts': (sentiment_factor <= -2)},
+                            'shorts': (sentiment_factor <= 2)},
                    screen=universe)
     return pipe
 
